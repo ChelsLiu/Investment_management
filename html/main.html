@@ -64,6 +64,21 @@
         str += '</ul>';
 
         $api.byId('sys-info').innerHTML = str;
+        api.setRefreshHeaderInfo({
+            visible: true,
+            loadingImg: 'widget://image/refresh.png',
+            bgColor: '#ccc',
+            textColor: '#fff',
+            textDown: '下拉刷新...',
+            textUp: '松开刷新...',
+            showTime: true
+        }, function(ret, err){
+            //查询是否有新数据
+            //有新数据就显示新数据
+            api.refreshHeaderLoadDone();
+
+        });
+
 
     };
 </script>
