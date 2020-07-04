@@ -29,6 +29,7 @@
 <body>
     <label>Hello APP</label>
     <div id='sys-info'></div>
+    <div id='test' onclick="openMy()">我的首页</div>
 </body>
 <script type="text/javascript" src="../script/api.js"></script>
 <script type="text/javascript">
@@ -81,6 +82,17 @@
 
 
     };
+
+    function openMy() {
+        api.openWin({
+            name: 'my page',
+            url: 'myPageWin.html',
+            pageParam: {
+                name: 'my page'
+            }
+        });
+
+    }
 </script>
 
 </html>

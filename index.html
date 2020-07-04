@@ -50,7 +50,7 @@
             <li tapmode="hover" onclick="randomSwitchBtn( this );" class="flex-con" >端API</li>
             <li tapmode="hover" onclick="randomSwitchBtn( this );" class="flex-con" >开发</li>
             <li tapmode="hover" onclick="randomSwitchBtn( this );" class="flex-con" >文档</li>
-            <li tapmode="hover" onclick="randomSwitchBtn( this );" class="flex-con" >我的</li>
+            <li tapmode="hover" onclick="openMy();" class="flex-con" >我的</li>
         </ul>
     </div>
 </div>
@@ -115,4 +115,16 @@
             index: index
         });
     }
+
+    function openMy() {
+        api.openWin({
+            name: 'my page',
+            url: 'html/win_user.html',
+            pageParam: {
+                name: 'my page'
+            }
+        });
+
+    }
+
 </script>
